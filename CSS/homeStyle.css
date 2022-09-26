@@ -12,17 +12,24 @@ padding: 0;
 position: fixed;
     width: 100%;
     height: 100%;
-    background-color: #0D2237;
+    /* background-color: #0D2237; */
     overflow: hidden;
+    display: block;
     
 }
 .main-bk{
     width: 100%;
     overflow: hidden;
     height: 100%;
+
+}
+.main-bk img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 .wave-1{
-    background-image: url(../images/waves.png);
+    /* background-image: url(../images/Shapes.svg); */
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
@@ -32,13 +39,41 @@ position: fixed;
     top: 0;
     left: 0;
 }
+.shapes{
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.shb{
+position: absolute;
+/* top: 50%;
+left: 100%; */
+width: 500px;
+animation: rot 10s infinite;
+}
+.nayzk{
+    width: 500px;
+    position: absolute;
+    top: -200px;
+    right: 0;
+    animation: corner 15s infinite linear ;
+    /* transition: 0.9s; */
+}
+.shb-cont{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    animation: toleft 20s infinite 0.2s linear   ;
+
+}
 .astrount{
     position: relative;
     /* height: 100%; */
     /* bottom: 0px; */
     top: calc(100% - 766px);
     margin-bottom:-5px ;
-    overflow: hidden;
+    /* overflow: hidden; */
     width: 100%;
 }
 .astrount::after{
@@ -83,6 +118,7 @@ position: fixed;
     padding: 0;
     /* position: absolute; */
     width: 200px;
+    z-index: -1;
 }
 .stars img:nth-child(1){
 bottom: 20%;
@@ -127,10 +163,11 @@ right: 20%;
     border: none;
     padding: 15px 15px 15px 40px;
     border-radius: 50px;
-    /* display: flex; */
+    display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgb(53, 15, 221);
+    opacity: 0.5;
     flex: 1;
     z-index: 1;
     position: relative;
@@ -138,8 +175,8 @@ right: 20%;
     margin-left: -35px;
     color: white;
     font-weight: 800;
-    display: none;
-    cursor: pointer;
+    /* display: none; */
+    cursor: not-allowed;
     transition: 0.9s;
 
 }
@@ -160,6 +197,185 @@ right: 20%;
     font-weight: 800;
     font-size: 30px;
 }
+@media (max-width: 767px){
+    .wave-1{
+        background: none;
+    }
+    .astrount{
+/* width: 300px; */
+/* height: 300px; */
+position: absolute;
+bottom: 0;
+top: 40%;
+right: 20px;
+/* width: 200px; */
+    }
+    .astrount::after{
+position: absolute;
+    /* right: 0; */
+    left: 50px;
+    top: -100px;
+    font-size: 70px;
+     /* margin-bottom: 20px;  */
+    background-color: white;
+    padding: 50px 0px 50px 50px;
+    border-radius: 5rem 5rem 6rem 7rem / 10rem 4rem 9rem 5rem;
+    font-size: 40px;
+    max-width: 250px;
+    font-weight: 700;
+    color: rgb(111, 56, 161);
+    }
+    .astrount::before{
+          left:30%;
+    top: 36px;
+    /* border: 15px solid red; */
+    border-color: transparent white transparent transparent;
+    border-width: 40px;
+    border-style: solid;
+    z-index: 2;
+    transform: rotate(16deg);
+    }
+    .inputVal{
+        margin: 20px auto;
+        top: 0;
+        left: 50%;
+        transform: translate(-50% , 50%);
+    }
+    .inputVal label{
+        font-size: 20px;
+    }
+}
+
 /* .stars:nth-child(1){
     width: 100%;
 } */
+
+
+
+/* Start second page */
+
+.ready-page{
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: none;
+    /* background-repeat: no-repeat; */
+    
+    /* background-image: url(../images/bkk.jpg) ; */
+}
+.ast-ready{
+    /* position: absolute; */
+    position: absolute;
+    left: -500px;
+    animation: up-and-down 5s linear  infinite;
+    top: calc(100% - 766px);
+    margin-bottom:-5px ;
+    width: 100%;
+    height: 100%;
+}
+.ast-ready img{
+    width: 1500px;
+}
+.ast-ready::after{
+    content: "";
+    position: absolute;
+    /* position: absolute; */
+    border-style: solid;
+    /* background-color: yellow; */
+    border-width: 20px;
+    border-color: transparent white transparent transparent;
+    left: 65%;
+    top: 35%;
+}
+.hello-txt{
+    padding: 20px;
+position: absolute;
+min-width: 200px;
+max-width: 201px;
+min-height: 100px;
+background-color: white;
+left: 68%;
+    top: 31%;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* End second page */
+
+
+/*Animition*/
+@keyframes toleft {
+    0%{
+        left: 100%;
+        transform: rotate(360deg);
+    }
+    50%{
+        transform: rotate(360deg);
+        left: 100%;
+    }
+    100%{
+                transform: rotate(360deg);
+        left: -100%;
+    }
+}
+@keyframes rot{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+                transform: rotate(360deg);
+
+    }
+}
+@keyframes corner {
+    from{
+    
+    }
+    to{
+        right: 200%;
+        top: 300%;
+    }
+}
+@keyframes rotater {
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes up-and-down {
+  0%,
+  100% {
+    top: 0;
+  }
+  50% {
+    top: -50px;
+  }
+}
