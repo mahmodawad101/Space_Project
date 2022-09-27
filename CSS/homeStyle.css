@@ -12,7 +12,7 @@ padding: 0;
 position: fixed;
     width: 100%;
     height: 100%;
-    /* background-color: #0D2237; */
+    background-color: #0D2237;
     overflow: hidden;
     display: block;
     
@@ -260,6 +260,7 @@ position: absolute;
     width: 100%;
     height: 100%;
     display: none;
+    background-color: #0D2237;
     /* background-repeat: no-repeat; */
     
     /* background-image: url(../images/bkk.jpg) ; */
@@ -301,6 +302,16 @@ left: 68%;
     font-size: 20px;
     font-weight: 700;
     
+}
+.overlay{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(90deg , #ffff , #3177b2);
+    opacity: 0.5;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 
