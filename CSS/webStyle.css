@@ -1,0 +1,206 @@
+body{
+/* font-family: 'Space Grotesk', sans-serif; */
+font-family: 'Josefin Sans', sans-serif;
+margin: 0;
+padding: 0;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right , #0b91ff3f , #305c80);
+    opacity: 0.5;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.main-bk{
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+
+}
+.main-bk img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+.nav-bar{
+    position: absolute;
+    padding: 20px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    background-color: white;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+.nav-bar img{
+    width: 100%;
+    /* background-color: green; */
+    margin-top: 20px;
+    fill: rgb(44, 46, 70);
+}
+.nav-bar img:hover {
+/* padding-right: 50px; */
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+
+@media (max-width: 767px){
+    .nav-bar{
+        top:-24%;
+        left: 38%;
+        margin: 0 auto;
+        /* width: 80%; */
+         transform: translateY(0);
+         transform: rotate(90deg);
+    }
+    .nav-bar img{
+    /* width: 100%; */
+    /* background-color: green; */
+    margin-top: 20px;
+    fill: rgb(44, 46, 70);
+    transform: rotate(270deg);
+    transition: 0.3s;
+}
+.nav-bar img:hover {
+/* padding-right: 50px; */
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.dis-block{
+    animation: dis-block 0.9s  ;
+}
+.dis-none{
+        animation: dis-none 1s  linear 0.9s 1 forwards ;
+display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* End second page */
+
+
+/*Animition*/
+@keyframes toleft {
+    0%{
+        left: 100%;
+        transform: rotate(360deg);
+    }
+    50%{
+        transform: rotate(360deg);
+        left: 100%;
+    }
+    100%{
+                transform: rotate(360deg);
+        left: -100%;
+    }
+}
+@keyframes rot{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+                transform: rotate(360deg);
+
+    }
+}
+@keyframes corner {
+    from{
+    
+    }
+    to{
+        right: 200%;
+        top: 300%;
+    }
+}
+@keyframes rotater {
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes up-and-down {
+  0%,
+  100% {
+    top: 0;
+  }
+  50% {
+    top: -50px;
+  }
+}
+@keyframes dis-block {
+    from{
+        opacity: 0;
+    }
+    to{
+opacity: 1;
+    }
+}
+@keyframes dis-none {
+    from{
+        opacity: 1;
+    }
+    to{
+opacity: 0;
+
+    }
+}

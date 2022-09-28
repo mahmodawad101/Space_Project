@@ -3,7 +3,9 @@ let letsGo = document.querySelector(".lets-go-btn");
 let startAud = document.querySelector(".start-audio");
 let startPage = document.querySelector(".start-page");
 let helloTxt = document.querySelector(".hello-txt");
-let readyPage = document.querySelector(".ready-page")
+let readyPage = document.querySelector(".ready-page");
+let thirdPage = document.querySelector(".third-link");
+console.log(thirdPage)
 
 
 let music = new Audio("Audio/StartSound.mp3");
@@ -30,18 +32,28 @@ letsGo.addEventListener("click" , function(e){
     console.log(inputName.value);
     startPage.style.display = "none";
     readyPage.style.display = "block";
-
+    readyPage.classList.add("dis-block")
+    
     let i = 0;
     let helloText = `Hello ${innerVal}, lets Start Our Journey`;
-function typingHello() {
-  if (i < helloText.length) {
-    helloTxt.innerHTML += helloText.charAt(i);
-    i++;
-    setTimeout(typingHello, 60);
-  }
-}
-typingHello()
-    music.play()
+    function typingHello() {
+      if (i < helloText.length) {
+        helloTxt.innerHTML += helloText.charAt(i);
+        i++;
+        setTimeout(typingHello, 60);
+      }
+    }
+    typingHello()
+    // music.play()
+    // music.loop
+    setTimeout(function () {
+      readyPage.classList.remove("dis-block")
+      readyPage.classList.add("dis-none")
+    }, 110 * helloText.length);
+    setTimeout(function () {
+      thirdPage.click();
+    }, 110 * helloText.length + 2300);
+    
   }else{
     startPage.style.display = "block";
   }
