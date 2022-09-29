@@ -72,6 +72,16 @@ transform: translateX(50%);
     text-align: center;
     color: white;
     cursor: pointer;
+    
+}
+.container div:not(.astr-yellow){
+    margin: 0;
+    padding: 0;
+}
+.container div:not(.astr-yellow) h3{
+margin: 0;
+margin-bottom: -40px;
+padding: 0;
 }
 .container div:not(.astr-yellow) img {
     width: 800px;
