@@ -1,0 +1,29 @@
+
+body{
+    background-image: url(../images/bkk.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white !important;
+}
+.fir{
+    margin: 40px 0;
+}
+li{
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+.fir-top{
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(238, 238, 238, 0.425);
+    border-radius: 7px;
+    margin: 90px 0;
+    border-bottom:2px solid var(--bs-orange) ;
+    border-top:2px solid var(--bs-orange) ;
+}
+p{
+    color: var(--bs-orange);
+}
+.fir-top p {
+    color: white !important;
+}

@@ -1,0 +1,18 @@
+body{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    background-image: url(../images/bkk.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container-md {
+    position: relative;
+   
+    /* margin-top:50%; */
+}
+.container-md .card{
+    /* position: absolute; */
+margin-top: 20%;
+margin-left: 40%;
+}
