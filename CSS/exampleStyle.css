@@ -52,3 +52,6 @@ padding: 0;
     background-color: rgba(47, 0, 255, 0.397);
     z-index: -1;
 }
+.width:not(:last-child){
+    margin-top: 195px;
+}

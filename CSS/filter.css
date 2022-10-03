@@ -4,7 +4,7 @@ body{
     align-items: center; */
     background-image: url(../images/bkk.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 200% 200% ;
 }
 .container-md {
     position: relative;

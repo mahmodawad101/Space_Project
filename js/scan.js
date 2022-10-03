@@ -18,4 +18,13 @@ deef.onclick = () => {
   }
   a.addEventListener("click", function () {
     img.style.filter = "saturate(7)"
-  })
+  });
+
+
+  img.onclick = () => {
+upB.click();
+  }
+
+document.getElementById("bton-1").addEventListener("click" , function(){
+  img.style.filter = "saturate(1)";
+})
